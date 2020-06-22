@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="scaffolded-by" content="https://github.com/dart-lang/stagehand">
+    <title>FlatWorldGenerator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico">
+    <script defer src="main.js"></script>
+</head>
+
+<body>
+<div style="text-align: center;">
+    <div class="title">Flat World Generator</div>
+    <div class="subTitle">for Minecraft BE</div>
+    <p class="descriptionText">MinecraftBE向けのフラットワールドを生成します</p>
+    <label>
+        バイオームID<br>
+        <input id="biomeId" type="number"><br><br>
+        １層<br>
+        <input id="firstBlockId" type="number"><input id="firstBlockData" type="number"><input id="firstBlockCount"
+                                                                                               type="number"><br><br>
+        2層<br>
+        <input id="secondBlockId" type="number"><input id="secondBlockData" type="number"><input id="secondBlockCount"
+                                                                                               type="number"><br><br>
+        3層<br>
+        <input id="thirdBlockId" type="number"><input id="thirdBlockData" type="number"><input id="thirdBlockCount"
+                                                                                                 type="number"><br><br>
+    </label>
+    <a id="generateButton" class="button">生成</a>
+    <a id="download" style="display: none;">download</a><br>
+</div>
+</body>
+</html>
