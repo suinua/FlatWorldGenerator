@@ -19,16 +19,19 @@
     <p class="descriptionText">MinecraftBE向けのフラットワールドを生成します</p>
     <label>
         バイオームID<br>
-        <input id="biomeId" type="number"><br><br>
+        <input id="biomeId" type="number" value=1><br><br>
         １層<br>
-        <input id="firstBlockId" type="number"><input id="firstBlockData" type="number"><input id="firstBlockCount"
-                                                                                               type="number"><br><br>
+        <input id="firstBlockId" type="number" placeholder="id">
+        <input id="firstBlockData" type="number" placeholder="data" value=0>
+        <input id="firstBlockCount" type="number" placeholder="count" value=1><br><br>
         2層<br>
-        <input id="secondBlockId" type="number"><input id="secondBlockData" type="number"><input id="secondBlockCount"
-                                                                                               type="number"><br><br>
+        <input id="secondBlockId" type="number" placeholder="id">
+        <input id="secondBlockData" type="number" placeholder="data" value=0>
+        <input id="secondBlockCount" type="number" placeholder="count" value=1><br><br>
         3層<br>
-        <input id="thirdBlockId" type="number"><input id="thirdBlockData" type="number"><input id="thirdBlockCount"
-                                                                                                 type="number"><br><br>
+        <input id="thirdBlockId" type="number" placeholder="id">
+        <input id="thirdBlockData" type="number" placeholder="data" value=0>
+        <input id="thirdBlockCount" type="number" placeholder="count" value=1><br><br>
     </label>
     <a id="generateButton" class="button">生成</a>
     <a id="download" style="display: none;">download</a><br>
