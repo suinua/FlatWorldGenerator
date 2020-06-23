@@ -16,25 +16,43 @@
 <div style="text-align: center;">
     <div class="title">Flat World Generator</div>
     <div class="subTitle">for Minecraft BE</div>
-    <p class="descriptionText">MinecraftBE向けのフラットワールドを生成します</p>
+    <p class="descriptionText">
+        MinecraftBE向けのフラットワールドを生成します(chromeのみ動作確認済み)<br>
+    </p>
+    <h4>
+        使い方<br>
+        1，<a href="javascript:downloadZip()">ここ</a>からZIPファイルをダウンロードし解凍<br>
+        2,level.dataを生成したものと置き換える<br>
+        3,マインクラフトにインポート<br>
+    </h4>
     <label>
         バイオームID<br>
         <input id="biomeId" type="number" value=1><br><br>
         １層<br>
         <input id="firstBlockId" type="number" placeholder="id">
-        <input id="firstBlockData" type="number" placeholder="data" value=0>
-        <input id="firstBlockCount" type="number" placeholder="count" value=1><br><br>
+        <input id="firstBlockData" type="number" placeholder="data値">
+        <input id="firstBlockCount" type="number" placeholder="高さ"><br><br>
         2層<br>
         <input id="secondBlockId" type="number" placeholder="id">
-        <input id="secondBlockData" type="number" placeholder="data" value=0>
-        <input id="secondBlockCount" type="number" placeholder="count" value=1><br><br>
+        <input id="secondBlockData" type="number" placeholder="data値">
+        <input id="secondBlockCount" type="number" placeholder="高さ"><br><br>
         3層<br>
         <input id="thirdBlockId" type="number" placeholder="id">
-        <input id="thirdBlockData" type="number" placeholder="data" value=0>
-        <input id="thirdBlockCount" type="number" placeholder="count" value=1><br><br>
+        <input id="thirdBlockData" type="number" placeholder="data値">
+        <input id="thirdBlockCount" type="number" placeholder="高さ"><br><br>
     </label>
     <a id="generateButton" class="button">生成</a>
     <a id="download" style="display: none;">download</a><br>
 </div>
+<script>
+function downloadZip() {
+    const a = document.createElement('a');
+    a.href = '../flat_world.zip';
+    a.download = 'flat_world';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+</script>
 </body>
 </html>
