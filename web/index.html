@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="scaffolded-by" content="https://github.com/dart-lang/stagehand">
     <title>FlatWorldGenerator</title>
-    <link rel="stylesheet" href="styles.css?v=0">
+    <link rel="stylesheet" href="styles.css?v=1">
     <link rel="icon" href="favicon.ico">
     <script defer src="../output/main.js"></script>
 </head>
@@ -17,7 +17,7 @@
     <div class="title">Flat World Generator</div>
     <div class="subTitle">for Minecraft BE</div>
     <p class="descriptionText">
-        MinecraftBE向けのフラットワールドを生成します(chromeのみ動作確認済み)<br>
+        MinecraftBE向けのフラットワールドを生成します<br>
     </p>
     <hr>
     <h3>使い方</h3>
@@ -35,20 +35,58 @@
     </h4>
     <hr>
     <label>
-        バイオームID<br>
-        <input id="biomeId" type="text" value=1><br><br>
-        １層<br>
-        <input id="firstBlockId" type="text" placeholder="id">
-        <input id="firstBlockData" type="text" placeholder="data値">
-        <input id="firstBlockCount" type="text" placeholder="厚さ"><br><br>
-        2層<br>
-        <input id="secondBlockId" type="text" placeholder="id">
-        <input id="secondBlockData" type="text" placeholder="data値">
-        <input id="secondBlockCount" type="text" placeholder="厚さ"><br><br>
-        3層<br>
-        <input id="thirdBlockId" type="text" placeholder="id">
-        <input id="thirdBlockData" type="text" placeholder="data値">
-        <input id="thirdBlockCount" type="text" placeholder="厚さ"><br><br>
+        <div class="LayerForm">
+            <h4 class="LayerNumber">バイオームID</h4>
+            <input id="biomeId" type="text" value=1>
+        </div><br>
+
+        <div class="LayerForm">
+            <h4 class="LayerNumber">1層</h4>
+            <div class="InputBox">
+                <div>ID</div>
+                <input id="firstBlockId" type="text" value=1 placeholder="id">
+            </div>
+            <div class="InputBox">
+                <div>データ値</div>
+                <input id="firstBlockData" type="text" value=1 placeholder="id">
+            </div>
+            <div class="InputBox">
+                <div>厚さ</div>
+                <input id="firstBlockCount" type="text" value=1 placeholder="id">
+            </div>
+        </div><br>
+
+        <div class="LayerForm">
+            <h4 class="LayerNumber">2層</h4>
+            <div class="InputBox">
+                <div>ID</div>
+                <input id="secondBlockId" type="text" value=1 placeholder="id">
+            </div>
+            <div class="InputBox">
+                <div>データ値</div>
+                <input id="secondBlockData" type="text" value=1 placeholder="id">
+            </div>
+            <div class="InputBox">
+                <div>厚さ</div>
+                <input id="secondBlockCount" type="text" value=1 placeholder="id">
+            </div>
+        </div><br>
+
+        <div class="LayerForm">
+            <h4 class="LayerNumber">3層</h4>
+            <div class="InputBox">
+                <div>ID</div>
+                <input id="thirdBlockId" type="text" value=1 placeholder="id">
+            </div>
+            <div class="InputBox">
+                <div>データ値</div>
+                <input id="thirdBlockData" type="text" value=1 placeholder="id">
+            </div>
+            <div class="InputBox">
+                <div>厚さ</div>
+                <input id="thirdBlockCount" type="text" value=1 placeholder="id">
+            </div>
+        </div><br>
     </label>
     <a id="generateButton" class="button">生成</a>
     <a id="download" style="display: none;">download</a><br>
