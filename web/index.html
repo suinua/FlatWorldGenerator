@@ -19,40 +19,51 @@
     <p class="descriptionText">
         MinecraftBE向けのフラットワールドを生成します(chromeのみ動作確認済み)<br>
     </p>
+    <hr>
+    <h3>使い方</h3>
     <h4>
-        使い方<br>
+        <a href="https://minecraft-ja.gamepedia.com/%E3%83%90%E3%82%A4%E3%82%AA%E3%83%BC%E3%83%A0/ID">バイオームIDリスト</a><br>
+        <a href="https://minecraft-ids.grahamedgecombe.com/">ブロックIDリスト</a><br>
         1，<a href="javascript:downloadZip()">ここ</a>からZIPファイルをダウンロードし解凍<br>
         2,level.dataを生成したものと置き換える<br>
         3,マインクラフトにインポート<br>
     </h4>
+    <h3>注意</h3>
+    <h4>
+        すべて半角の数字で入力してください<br>
+        Androidおよびpc版Chromeのみ、動作確認をしています。
+    </h4>
+    <hr>
     <label>
         バイオームID<br>
-        <input id="biomeId" type="number" value=1><br><br>
+        <input id="biomeId" type="text" value=1><br><br>
         １層<br>
-        <input id="firstBlockId" type="number" placeholder="id">
-        <input id="firstBlockData" type="number" placeholder="data値">
-        <input id="firstBlockCount" type="number" placeholder="厚さ"><br><br>
+        <input id="firstBlockId" type="text" placeholder="id">
+        <input id="firstBlockData" type="text" placeholder="data値">
+        <input id="firstBlockCount" type="text" placeholder="厚さ"><br><br>
         2層<br>
-        <input id="secondBlockId" type="number" placeholder="id">
-        <input id="secondBlockData" type="number" placeholder="data値">
-        <input id="secondBlockCount" type="number" placeholder="厚さ"><br><br>
+        <input id="secondBlockId" type="text" placeholder="id">
+        <input id="secondBlockData" type="text" placeholder="data値">
+        <input id="secondBlockCount" type="text" placeholder="厚さ"><br><br>
         3層<br>
-        <input id="thirdBlockId" type="number" placeholder="id">
-        <input id="thirdBlockData" type="number" placeholder="data値">
-        <input id="thirdBlockCount" type="number" placeholder="厚さ"><br><br>
+        <input id="thirdBlockId" type="text" placeholder="id">
+        <input id="thirdBlockData" type="text" placeholder="data値">
+        <input id="thirdBlockCount" type="text" placeholder="厚さ"><br><br>
     </label>
     <a id="generateButton" class="button">生成</a>
     <a id="download" style="display: none;">download</a><br>
+    <hr>
+    不具合など、何かあれば<a href="https://twitter.com/suinua">Twitter</a>のDMでお願いします
 </div>
 <script>
-function downloadZip() {
-    const a = document.createElement('a');
-    a.href = '../flat_world.zip';
-    a.download = 'flat_world';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-}
+    function downloadZip() {
+        const a = document.createElement('a');
+        a.href = '../flat_world.zip';
+        a.download = 'flat_world';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    }
 </script>
 </body>
 </html>

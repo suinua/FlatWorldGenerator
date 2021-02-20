@@ -20,7 +20,7 @@ div.subTitle {
   margin: 0 0 1.6875em 0;
 }
 
-input[type='number'] {
+input[type='text'] {
   height: 50px;
   font: 15px/24px sans-serif;
   box-sizing: border-box;
@@ -34,19 +34,19 @@ input[type='number'] {
   width: 30%;
 }
 
-input[type='number']::placeholder {
+input[type='text']::placeholder {
   color: #aaaaaa;
 }
 
-input[type='number']:-ms-input-placeholder {
+input[type='text']:-ms-input-placeholder {
   color: #aaaaaa;
 }
 
-input[type='number']::-ms-input-placeholder {
+input[type='text']::-ms-input-placeholder {
   color: #aaaaaa;
 }
 
-input[type='number']:focus {
+input[type='text']:focus {
   outline: none;
   box-shadow: inset 1px 1px 2px 0 #c9c9c9;
 }
@@ -90,4 +90,10 @@ a.button:active {
   margin: 0;
   font-size: 100px;
   cursor: pointer;
+}
+
+hr {
+  height: 1px;
+  border: none;
+  border-top: 1px #e3e3e3 solid;
 }

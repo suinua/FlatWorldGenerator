@@ -11,40 +11,40 @@ import 'level_data.dart';
 void main() {
   AnchorElement generateButton = querySelector('#generateButton');
   generateButton.onClick.listen((event) {
-    NumberInputElement biomeIdElement = querySelector('#biomeId');
+    InputElement biomeIdElement = querySelector('#biomeId');
 
-    NumberInputElement firstBlockIdElement = querySelector('#firstBlockId');
-    NumberInputElement firstBlockDataElement = querySelector('#firstBlockData');
-    NumberInputElement firstBlockCountElement =
+    InputElement firstBlockIdElement = querySelector('#firstBlockId');
+    InputElement firstBlockDataElement = querySelector('#firstBlockData');
+    InputElement firstBlockCountElement =
         querySelector('#firstBlockCount');
 
     var firstBlockLayer = BlockLayer(
-        id: BlockId(firstBlockIdElement.valueAsNumber),
-        data: BlockDataValue(firstBlockDataElement.valueAsNumber),
-        count: BlockCount(firstBlockCountElement.valueAsNumber));
+        id: BlockId(int.parse(firstBlockIdElement.value)),
+        data: BlockDataValue(int.parse(firstBlockDataElement.value)),
+        count: BlockCount(int.parse(firstBlockCountElement.value)));
 
-    NumberInputElement secondBlockIdElement = querySelector('#secondBlockId');
-    NumberInputElement secondBlockDataElement =
+    InputElement secondBlockIdElement = querySelector('#secondBlockId');
+    InputElement secondBlockDataElement =
         querySelector('#secondBlockData');
-    NumberInputElement secondBlockCountElement =
+    InputElement secondBlockCountElement =
         querySelector('#secondBlockCount');
 
     var secondBlockLayer = BlockLayer(
-        id: BlockId(secondBlockIdElement.valueAsNumber),
-        data: BlockDataValue(secondBlockDataElement.valueAsNumber),
-        count: BlockCount(secondBlockCountElement.valueAsNumber));
+        id: BlockId(int.parse(secondBlockIdElement.value)),
+        data: BlockDataValue(int.parse(secondBlockDataElement.value)),
+        count: BlockCount(int.parse(secondBlockCountElement.value)));
 
-    NumberInputElement thirdBlockIdElement = querySelector('#thirdBlockId');
-    NumberInputElement thirdBlockDataElement = querySelector('#thirdBlockData');
-    NumberInputElement thirdBlockCountElement =
+    InputElement thirdBlockIdElement = querySelector('#thirdBlockId');
+    InputElement thirdBlockDataElement = querySelector('#thirdBlockData');
+    InputElement thirdBlockCountElement =
         querySelector('#thirdBlockCount');
 
     var thirdBlockLayer = BlockLayer(
-        id: BlockId(thirdBlockIdElement.valueAsNumber),
-        data: BlockDataValue(thirdBlockDataElement.valueAsNumber),
-        count: BlockCount(thirdBlockCountElement.valueAsNumber));
+        id: BlockId(int.parse(thirdBlockIdElement.value)),
+        data: BlockDataValue(int.parse(thirdBlockDataElement.value)),
+        count: BlockCount(int.parse(thirdBlockCountElement.value)));
 
-    convert(BiomeId(biomeIdElement.valueAsNumber), firstBlockLayer,
+    convert(BiomeId(int.parse(biomeIdElement.value)), firstBlockLayer,
         secondBlockLayer, thirdBlockLayer);
   });
 }
